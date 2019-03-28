@@ -50,11 +50,3 @@ ari = math.ceil(ari)
 
 #using ari math to access dictionary
 print(ari_scale[ari])
-
-
-
-
-
-
-
-
