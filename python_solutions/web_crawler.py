@@ -6,5 +6,11 @@ def spider(mp):
     while page < mp:
         url = 'http://nathantrodgers.pythonanywhere.com/'
         source_code = requests.get(url)
-        plain_text = source_code.text
-        
+        source_text = source_code.text
+        extracted_txt = BeautifulSoup(source_text)
+            for link in extracted_txt.findAll('a', {'class': 'item_name'}):
+                href = link.get('hred')
+                print(href)
+
+spider(1)
+            
